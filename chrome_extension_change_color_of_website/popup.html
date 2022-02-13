@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change BG</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  h1 ,body{
+    font-family: 'Poppins', sans-serif;
+    width: 350px;
+  }
+ 
+  h1 , p{
+    text-align: center;
+  }
+  .yellow{
+    color: #E07C24;
+    font-weight: 700;
+  }
+  .blue{
+    color: #383CC1;
+    font-weight: 700;
+  }
+  .button{
+    background: #12B0E8;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    width: 4.5rem;
+    border-radius: 1rem;
+    /*animation: backgroundinyellow 1s  infinite ;*/
+    margin: auto;
+    cursor: pointer;
+  }
+  .row{
+   padding: 5px 10px  ;
+   font-weight: 600;
+   pointer-events: none;
+  }
+  .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: #383CC1 ;
+    /*animation: movecircleright 1s  infinite ;*/
+    pointer-events: none;
+   }
+
+   /* animation */
+   @keyframes movecircleright{
+    from {
+      left: 0;
+      background-color: #383CC1;
+     
+      
+     }
+     to{
+      left: 100%;
+      transform: translateX(-100%);
+      background-color: #5A20CB;
+      
+     }
+  }
+
+
+   @keyframes movecircleleft{
+     from {
+      left: 100%;
+      transform: translateX(-100%);
+      background-color: #5A20CB;
+       
+      }
+      to{
+        left: 0;
+       background-color: #383CC1;
+      }
+   }
+   @keyframes backgroundinyellow {
+     from{
+       background-color: lightblue;
+
+     }
+     to{
+       background-color: #F4BE2C;
+     }
+     
+   }
+   @keyframes backgroundinblue {
+    from{
+      background-color: #F4BE2C;
+     
+
+    }
+    to{
+      background-color: lightblue;
+    }
+    
+  }
+
+
+
+     
+   
+  </style>
+<body class="popup">
+  <h1><span class="yellow">Change</span><span class="blue">BG</span></h1>
+  <p>Bored lookign at the websites the same way? <br>
+  Meet Change BG a chrome extension that can<br>
+   change your dark mode to light mode and vice-versa:) </p>
+   <div class="button">
+     <div class="row">On</div>
+     <div class="row">Off</div>
+     <div class="circle"></div>
+   </div>
+  <script src="popup.js"></script>
+</body>
+</html>

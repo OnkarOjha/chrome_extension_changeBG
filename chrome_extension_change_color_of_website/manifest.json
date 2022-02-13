@@ -1,0 +1,25 @@
+{
+    "name": "Change BG",
+    "description":"Go from dark mode to light mode and vice-versa",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "background":{
+      "scripts":["popup.js"],
+      "persistent": true
+    },
+
+
+
+    "browser_action":{
+      "default_title":"Change BG",
+      "default_popup":"popup.html",
+      "default_icon" : "google-icon.png"
+    },
+    "permissions":[
+      "https://*/*",
+      "http://*/*",
+      "tabs"
+
+  ]
+
+}
